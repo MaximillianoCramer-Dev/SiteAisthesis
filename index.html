@@ -46,44 +46,66 @@
                 <img src="img/sec1.jpeg" alt="Seção" class="img-fluid" style="border-radius: 10px;">
             </div>
 
-            <!-- Google Calendar Appointment Scheduling -->
-<div class="text-center" style="width: 70%;">
-    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-    <script>
+            <!-- Home -->
+<section id="home" class="home-section text-center text-white d-flex align-items-center justify-content-center">
+    <div class="overlay">
+  
+      <!-- Google Calendar Appointment Scheduling -->
+      <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet" />
+      <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+      <script>
         (function () {
-            var target = document.currentScript;
-            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent); // Detecta dispositivos móveis
-
-            window.addEventListener('load', function () {
-                if (isMobile) {
-                    // Em dispositivos móveis, o botão redireciona para a URL em uma nova aba
-                    var mobileLink = document.createElement('a');
-                    mobileLink.href = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1J_Vy-TKhCc3sY-aIqKO4UYhVRFpao9C0cGHhAFZCUAJKHpfuzuQuQT76MlRCrbL8KEwtJA2-n?gv=true';
-                    mobileLink.textContent = 'Agendar uma consulta';
-                    mobileLink.style.display = 'inline-block';
-                    mobileLink.style.padding = '10px 20px';
-                    mobileLink.style.backgroundColor = '#CDA282';
-                    mobileLink.style.color = '#fff';
-                    mobileLink.style.borderRadius = '5px';
-                    mobileLink.style.textDecoration = 'none';
-                    mobileLink.style.fontSize = '16px';
-                    mobileLink.target = '_blank'; // Abre em nova aba
-                    document.querySelector('.text-center').appendChild(mobileLink);
-                } else {
-                    // Em desktops, carrega o botão embutido
-                    calendar.schedulingButton.load({
-                        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1J_Vy-TKhCc3sY-aIqKO4UYhVRFpao9C0cGHhAFZCUAJKHpfuzuQuQT76MlRCrbL8KEwtJA2-n?gv=true',
-                        color: '#CDA282',
-                        label: 'Agendar uma consulta',
-                        target,
-                    });
-                }
-            });
+          var target = document.currentScript;
+  
+          function setupGoogleCalendar() {
+            if (window.innerWidth <= 768) {
+              // Para telas menores (celulares/tablets), cria um botão customizado se ele não existir
+              if (!document.querySelector(".custom-calendar-button")) {
+                const button = document.createElement("a");
+                button.href =
+                  "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1J_Vy-TKhCc3sY-aIqKO4UYhVRFpao9C0cGHhAFZCUAJKHpfuzuQuQT76MlRCrbL8KEwtJA2-n?gv=true"; // Link do agendamento
+                button.target = "_blank"; // Abre em nova aba
+                button.rel = "noopener noreferrer"; // Protege contra reverse tabnabbing e melhora desempenho
+                button.textContent = "Agende uma consulta";
+                button.style.backgroundColor = "#9B715F";
+                button.style.color = "#ffffff";
+                button.style.padding = "10px 20px";
+                button.style.borderRadius = "5px";
+                button.style.textDecoration = "none";
+                button.style.display = "inline-block";
+                button.style.marginTop = "10px";
+                button.classList.add("custom-calendar-button"); // Adiciona uma classe para identificar o botão
+  
+                // Substitui o botão do Google Calendar pelo botão customizado
+                target.parentNode.replaceChild(button, target);
+              }
+            } else {
+              // Para telas maiores (desktop), carrega o botão original do Google Calendar, se ele não existir
+              if (
+                typeof calendar !== "undefined" &&
+                calendar.schedulingButton &&
+                !document.querySelector(".custom-calendar-button")
+              ) {
+                calendar.schedulingButton.load({
+                  url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1J_Vy-TKhCc3sY-aIqKO4UYhVRFpao9C0cGHhAFZCUAJKHpfuzuQuQT76MlRCrbL8KEwtJA2-n?gv=true",
+                  color: "#9B715F",
+                  label: "Agende sua consulta aqui",
+                  target,
+                });
+              }
+            }
+          }
+  
+          // Chama a função após o carregamento da página
+          window.addEventListener("load", setupGoogleCalendar);
+  
+          // Atualiza o botão ao redimensionar a janela sem recarregar a página
+          window.addEventListener("resize", setupGoogleCalendar);
         })();
-    </script>
-</div>
-
+      </script>
+    </div>
+  </section>
+  
 
             <!-- Coluna Direita com Imagens -->
             <div class="d-flex flex-column align-items-center justify-content-around" style="width: 15%;">
