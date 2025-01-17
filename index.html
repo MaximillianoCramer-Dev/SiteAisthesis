@@ -47,23 +47,43 @@
             </div>
 
             <!-- Google Calendar Appointment Scheduling -->
-            <div class="text-center" style="width: 70%;">
-                <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-                <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-                <script>
-                    (function () {
-                        var target = document.currentScript;
-                        window.addEventListener('load', function () {
-                            calendar.schedulingButton.load({
-                                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1J_Vy-TKhCc3sY-aIqKO4UYhVRFpao9C0cGHhAFZCUAJKHpfuzuQuQT76MlRCrbL8KEwtJA2-n?gv=true',
-                                color: '#CDA282',
-                                label: 'Agendar uma consulta',
-                                target,
-                            });
-                        });
-                    })();
-                </script>
-            </div>
+<div class="text-center" style="width: 70%;">
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+    <script>
+        (function () {
+            var target = document.currentScript;
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent); // Detecta dispositivos móveis
+
+            window.addEventListener('load', function () {
+                if (isMobile) {
+                    // Em dispositivos móveis, o botão redireciona para a URL em uma nova aba
+                    var mobileLink = document.createElement('a');
+                    mobileLink.href = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1J_Vy-TKhCc3sY-aIqKO4UYhVRFpao9C0cGHhAFZCUAJKHpfuzuQuQT76MlRCrbL8KEwtJA2-n?gv=true';
+                    mobileLink.textContent = 'Agendar uma consulta';
+                    mobileLink.style.display = 'inline-block';
+                    mobileLink.style.padding = '10px 20px';
+                    mobileLink.style.backgroundColor = '#CDA282';
+                    mobileLink.style.color = '#fff';
+                    mobileLink.style.borderRadius = '5px';
+                    mobileLink.style.textDecoration = 'none';
+                    mobileLink.style.fontSize = '16px';
+                    mobileLink.target = '_blank'; // Abre em nova aba
+                    document.querySelector('.text-center').appendChild(mobileLink);
+                } else {
+                    // Em desktops, carrega o botão embutido
+                    calendar.schedulingButton.load({
+                        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1J_Vy-TKhCc3sY-aIqKO4UYhVRFpao9C0cGHhAFZCUAJKHpfuzuQuQT76MlRCrbL8KEwtJA2-n?gv=true',
+                        color: '#CDA282',
+                        label: 'Agendar uma consulta',
+                        target,
+                    });
+                }
+            });
+        })();
+    </script>
+</div>
+
 
             <!-- Coluna Direita com Imagens -->
             <div class="d-flex flex-column align-items-center justify-content-around" style="width: 15%;">
