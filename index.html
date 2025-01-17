@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Massagista e Esteticista</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Playwrite+AU+SA:wght@100..400&family=Protest+Revolution&family=Questrial&family=Share+Tech&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/sublogo.jpeg" alt="" class="navbar-logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificados">Certificados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="py-5 text-center bg-light"
+        style="height: 100vh; display: flex; align-items: center; justify-content: center;">
+        <div class="container d-flex align-items-center justify-content-between">
+            <!-- Coluna Esquerda com Imagens -->
+            <div class="d-flex flex-column align-items-center justify-content-around" style="width: 15%;">
+                <img src="img/pec1.jpeg" alt="antes&depois" class="img-fluid mb-3" style="border-radius: 10px;">
+                <img src="img/sec1.jpeg" alt="Seção" class="img-fluid" style="border-radius: 10px;">
+            </div>
+
+            <!-- Google Calendar Appointment Scheduling -->
+            <div class="text-center" style="width: 70%;">
+                <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+                <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+                <script>
+                    (function () {
+                        var target = document.currentScript;
+                        window.addEventListener('load', function () {
+                            calendar.schedulingButton.load({
+                                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1J_Vy-TKhCc3sY-aIqKO4UYhVRFpao9C0cGHhAFZCUAJKHpfuzuQuQT76MlRCrbL8KEwtJA2-n?gv=true',
+                                color: '#CDA282',
+                                label: 'Agendar uma consulta',
+                                target,
+                            });
+                        });
+                    })();
+                </script>
+            </div>
+
+            <!-- Coluna Direita com Imagens -->
+            <div class="d-flex flex-column align-items-center justify-content-around" style="width: 15%;">
+                <img src="img/pec2.jpeg" alt="antes&depois" class="img-fluid mb-3" style="border-radius: 10px;">
+                <img src="img/sec2.jpeg" alt="Seção" class="img-fluid" style="border-radius: 10px;">
+            </div>
+        </div>
+    </section>
+
+<!-- Antes e Depois - Slide -->
+<section id="antes-depois" class="py-5 text-center">
+    <div class="container">
+        <h2 class="p-lg-3">Antes e Depois</h2>
+        <div id="antesDepoisCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 - Antes -->
+                <div class="carousel-item active">
+                    <div class="position-relative">
+                        <h4 class="position-absolute top-0 start-50 translate-middle-x text-black p-2">Redução da papada</h4>
+                        <div class="image-container">
+                            <img src="img/antes1.jpeg" class="d-block w-100" alt="Antes 1">
+                        </div>
+                        <h3 class="mt-3">Antes</h3>
+                    </div>
+                </div>
+                <!-- Slide 2 - Depois -->
+                <div class="carousel-item">
+                    <div class="position-relative">
+                        <h4 class="position-absolute top-0 start-50 translate-middle-x text-black p-2">Redução da papada</h4>
+                        <div class="image-container">
+                            <img src="img/depois1.jpeg" class="d-block w-100" alt="Depois 1">
+                        </div>
+                        <h3 class="mt-3">Depois</h3>
+                    </div>
+                </div>
+                <!-- Slide 3 - Antes -->
+                <div class="carousel-item">
+                    <div class="position-relative">
+                        <h4 class="position-absolute top-0 start-50 translate-middle-x text-black p-2">Drenagem Linfática</h4>
+                        <div class="image-container">
+                            <img src="img/antes2.jpeg" class="d-block w-100" alt="Antes 2">
+                        </div>
+                        <h3 class="mt-3">Antes</h3>
+                    </div>
+                </div>
+                <!-- Slide 4 - Depois -->
+                <div class="carousel-item">
+                    <div class="position-relative">
+                        <h4 class="position-absolute top-0 start-50 translate-middle-x text-black p-2">Drenagem Linfática</h4>
+                        <div class="image-container">
+                            <img src="img/depois2.jpeg" class="d-block w-100" alt="Depois 2">
+                        </div>
+                        <h3 class="mt-3">Depois</h3>
+                    </div>
+                </div>
+                <!-- Slide 5 - Antes -->
+                <div class="carousel-item">
+                    <div class="position-relative">
+                        <h4 class="position-absolute top-0 start-50 translate-middle-x text-black p-2">Drenagem Linfática</h4>
+                        <div class="image-container">
+                            <img src="img/antes3.jpeg" class="d-block w-100" alt="Antes 3">
+                        </div>
+                        <h3 class="mt-3">Antes</h3>
+                    </div>
+                </div>
+                <!-- Slide 6 - Depois -->
+                <div class="carousel-item">
+                    <div class="position-relative">
+                        <h4 class="position-absolute top-0 start-50 translate-middle-x text-black p-2">Drenagem Linfática</h4>
+                        <div class="image-container">
+                            <img src="img/depois3.jpeg" class="d-block w-100" alt="Depois 3">
+                        </div>
+                        <h3 class="mt-3">Depois</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- Controle dos botões -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#antesDepoisCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#antesDepoisCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Certificados Section -->
+    <section id="certificados" class="py-5">
+        <div class="container">
+            <h3 class="text-center">Diplomas&Certificações</h3>
+            <p class="text-center">
+                Conheça os cursos e especializações que garantem a excelência dos nossos serviços.
+            </p>
+            <div class="row text-center">
+                <!-- Certificados -->
+                <div class="col-6 col-sm-4 col-md-3 mb-4">
+                    <div class="card shadow border-0">
+                        <img src="img/certificado0.jpeg" class="card-img-top" style="height: 150px; object-fit: cover;"
+                            alt="Certificado 1" data-bs-toggle="modal" data-bs-target="#certificadoModal">
+                        <div class="card-body p-2">
+                            <p class="card-text small">Curso de Botox na pressurizada - Instituto Beluti</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 mb-4">
+                    <div class="card shadow border-0">
+                        <img src="img/certificado1.jpeg" class="card-img-top" style="height: 150px; object-fit: cover;"
+                            alt="Certificado 1" data-bs-toggle="modal" data-bs-target="#certificadoModal">
+                        <div class="card-body p-2">
+                            <p class="card-text small">Curso de Drenagem corporal e facial completo - ADCOS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 mb-4">
+                    <div class="card shadow border-0">
+                        <img src="img/certificado2.jpeg" class="card-img-top" style="height: 150px; object-fit: cover;"
+                            alt="Certificado 1" data-bs-toggle="modal" data-bs-target="#certificadoModal">
+                        <div class="card-body p-2">
+                            <p class="card-text small">Tecnóloga em Embelezamento e Imagem pessoal - Faculdade Unopar
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 mb-4">
+                    <div class="card shadow border-0">
+                        <img src="img/certificado3.jpeg" class="card-img-top" style="height: 150px; object-fit: cover;"
+                            alt="Certificado 1" data-bs-toggle="modal" data-bs-target="#certificadoModal">
+                        <div class="card-body p-2">
+                            <p class="card-text small">Curso de Massagem Redutora - Espaço Daiane Oliveira</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 mb-4">
+                    <div class="card shadow border-0">
+                        <img src="img/certificado4.jpeg" class="card-img-top" style="height: 150px; object-fit: cover;"
+                            alt="Certificado 1" data-bs-toggle="modal" data-bs-target="#certificadoModal">
+                        <div class="card-body p-2">
+                            <p class="card-text small">Curso de Intradermoterapia pressurizada - Esteticx</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 mb-4">
+                    <div class="card shadow border-0">
+                        <img src="img/certificado5.jpeg" class="card-img-top" style="height: 150px; object-fit: cover;"
+                            alt="Certificado 1" data-bs-toggle="modal" data-bs-target="#certificadoModal">
+                        <div class="card-body p-2">
+                            <p class="card-text small">Curso de Hyaluron pen corporal - Instituto Beluti</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 mb-4">
+                    <div class="card shadow border-0">
+                        <img src="img/certificado6.jpeg" class="card-img-top" style="height: 150px; object-fit: cover;"
+                            alt="Certificado 1" data-bs-toggle="modal" data-bs-target="#certificadoModal">
+                        <div class="card-body p-2">
+                            <p class="card-text small">Workshop de terapias de spa day para centros de estética - Centro
+                                de estétic Harmonia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 mb-4">
+                    <div class="card shadow border-0">
+                        <img src="img/certificado7.jpeg" class="card-img-top" style="height: 150px; object-fit: cover;"
+                            alt="Certificado 1" data-bs-toggle="modal" data-bs-target="#certificadoModal">
+                        <div class="card-body p-2">
+                            <p class="card-text small">Curso de Limpeza de pele - Instituto Monique Alba</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 mb-4">
+                    <div class="card shadow border-0">
+                        <img src="img/certificado8.jpeg" class="card-img-top" style="height: 150px; object-fit: cover;"
+                            alt="Certificado 1" data-bs-toggle="modal" data-bs-target="#certificadoModal">
+                        <div class="card-body p-2">
+                            <p class="card-text small">Curso de Ventosaterapia - Extratos da terra</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 mb-4">
+                    <div class="card shadow border-0">
+                        <img src="img/certificado9.jpeg" class="card-img-top" style="height: 150px; object-fit: cover;"
+                            alt="Certificado 1" data-bs-toggle="modal" data-bs-target="#certificadoModal">
+                        <div class="card-body p-2">
+                            <p class="card-text small">Curso de Massagem Relaxante com pedras quentes - Extratos da
+                                terra</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 mb-4">
+                    <div class="card shadow border-0">
+                        <img src="img/certificado10.jpeg" class="card-img-top" style="height: 150px; object-fit: cover;"
+                            alt="Certificado 1" data-bs-toggle="modal" data-bs-target="#certificadoModal">
+                        <div class="card-body p-2">
+                            <p class="card-text small">Curso de Intercorrências - Instituto Beluti </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 mb-4">
+                    <div class="card shadow border-0">
+                        <img src="img/certificado11.jpeg" class="card-img-top" style="height: 150px; object-fit: cover;"
+                            alt="Certificado 1" data-bs-toggle="modal" data-bs-target="#certificadoModal">
+                        <div class="card-body p-2">
+                            <p class="card-text small">Curso de Drenagem linfática corporal e facial- ADCOS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 mb-4">
+                    <div class="card shadow border-0">
+                        <img src="img/certificado12.jpeg" class="card-img-top" style="height: 150px; object-fit: cover;"
+                            alt="Certificado 1" data-bs-toggle="modal" data-bs-target="#certificadoModal">
+                        <div class="card-body p-2">
+                            <p class="card-text small">Seminário Bel Col "Sonho de pele" - Distribuidora Bel Col
+                                Sorocaba</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 mb-4">
+                    <div class="card shadow border-0">
+                        <img src="img/certificado13.jpeg" class="card-img-top" style="height: 150px; object-fit: cover;"
+                            alt="Certificado 1" data-bs-toggle="modal" data-bs-target="#certificadoModal">
+                        <div class="card-body p-2">
+                            <p class="card-text small">Formação em Massoterapia TopCorpus - Instituto Ana Martha</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 mb-4">
+                    <div class="card shadow border-0">
+                        <img src="img/certificado14.jpeg" class="card-img-top" style="height: 150px; object-fit: cover;"
+                            alt="Certificado 1" data-bs-toggle="modal" data-bs-target="#certificadoModal">
+                        <div class="card-body p-2">
+                            <p class="card-text small">Curso de Tratamento para diástase - Instituto Janaina Oliveira
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 mb-4">
+                    <div class="card shadow border-0">
+                        <img src="img/certificado15.jpeg" class="card-img-top" style="height: 150px; object-fit: cover;"
+                            alt="Certificado 1" data-bs-toggle="modal" data-bs-target="#certificadoModal">
+                        <div class="card-body p-2">
+                            <p class="card-text small">Curso de Capacitação Criolipólise de placas - Instituto Janaina
+                                Oliveira</p>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Nossos Serviços</h2>
+            <div class="row mt-4 d-flex flex-wrap justify-content-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Massoterapia: fácil corporal</h5>
+                            <h6>Reduza o estresse e a tensão muscular.</h6>
+                            <p class="card-text">
+                                A massoterapia é uma técnica terapêutica que utiliza manobras de massagem para aliviar a
+                                dor muscular, reduzir o estresse e melhorar a circulação sanguínea. A massagem corporal
+                                ajuda a liberar a tensão dos músculos, promovendo relaxamento profundo e bem-estar
+                                geral.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Drenagem Linfática</h5>
+                            <h6>Revitalize sua pele com nossos tratamentos.</h6>
+                            <p class="card-text">
+                                A drenagem linfática é uma técnica suave que visa estimular o sistema linfático para
+                                remover toxinas do corpo. Ideal para reduzir retenção de líquidos, melhorar a circulação
+                                e proporcionar uma sensação de leveza e rejuvenescimento da pele.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Massagem Relaxante</h5>
+                            <h6>Sessões adaptadas às suas necessidades.</h6>
+                            <p class="card-text">
+                                A massagem relaxante é indicada para quem busca alívio do estresse diário e uma sensação
+                                de bem-estar. Através de movimentos suaves e contínuos, essa técnica ajuda a reduzir a
+                                tensão muscular, acalma o sistema nervoso e promove um profundo relaxamento mental e
+                                físico.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Massagem pedra quentes</h5>
+                            <h6>Sessões adaptadas às suas necessidades.</h6>
+                            <p class="card-text">
+                                A massagem com pedras quentes combina o calor das pedras aquecidas com técnicas de
+                                massagem terapêutica. O calor das pedras ajuda a aliviar tensões musculares, melhorar a
+                                circulação e promover um estado de relaxamento profundo, trazendo equilíbrio para o
+                                corpo e mente.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Ventosa Terapia</h5>
+                            <h6>Sessões adaptadas às suas necessidades.</h6>
+                            <p class="card-text">
+                                A ventosa terapia utiliza copos de vidro ou silicone para criar um vácuo sobre a pele.
+                                Esse vácuo estimula a circulação sanguínea e ajuda a liberar toxinas, sendo útil no
+                                tratamento de dores musculares, celulite e até mesmo para o alívio de tensões
+                                respiratórias.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Massagem esculpe Detox</h5>
+                            <h6>Sessões adaptadas às suas necessidades.</h6>
+                            <p class="card-text">
+                                A massagem esculpe detox combina técnicas de drenagem linfática e manipulação muscular
+                                para promover a eliminação de toxinas, reduzir o inchaço e melhorar o contorno corporal.
+                                Ideal para quem deseja melhorar a circulação e a aparência da pele.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Criolipólise de placas</h5>
+                            <h6>Sessões adaptadas às suas necessidades.</h6>
+                            <p class="card-text">
+                                A criolipólise é uma técnica de redução de gordura localizada que utiliza o frio para
+                                congelar e eliminar as células de gordura de maneira natural. Esse procedimento não
+                                invasivo ajuda a modelar o corpo, reduzindo medidas de forma eficaz.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Limpeza pele extração de cravos acne</h5>
+                            <h6>Sessões adaptadas às suas necessidades.</h6>
+                            <p class="card-text">
+                                A limpeza de pele é essencial para quem busca uma pele mais limpa, saudável e sem
+                                imperfeições. O processo envolve a remoção de cravos, acne e impurezas, além de promover
+                                a renovação celular e hidratação da pele.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Enzimas na caneta Pressurizada</h5>
+                            <h6>Sessões adaptadas às suas necessidades.</h6>
+                            <p class="card-text">
+                                A técnica de enzimas pressurizadas utiliza um equipamento especializado para aplicar
+                                enzimas na pele. Essas enzimas têm a função de promover o rejuvenescimento, reduzir a
+                                gordura localizada e melhorar a elasticidade da pele, proporcionando um efeito lifting
+                                natural.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Preenchemos lábios </h5>
+                            <h6>Sessões adaptadas às suas necessidades.</h6>
+                            <p class="card-text">
+                                O preenchimento de lábios é um procedimento estético que utiliza substâncias como o
+                                ácido hialurônico para aumentar o volume dos lábios, melhorar seu contorno e hidratar a
+                                região, criando um sorriso mais harmônico e atraente.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Redução papada</h5>
+                            <h6>Sessões adaptadas às suas necessidades.</h6>
+                            <p class="card-text">
+                                A redução de papada envolve técnicas estéticas que auxiliam no afinamento da região do
+                                pescoço e mandíbula. Através de massagens e tratamentos, como a lipocavitação ou a
+                                drenagem, é possível reduzir a gordura localizada, proporcionando um contorno facial
+                                mais definido.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Botox</h5>
+                            <h6>Sessões adaptadas às suas necessidades.</h6>
+                            <p class="card-text">
+                                O Botox é um tratamento estético popular que utiliza a toxina botulínica para suavizar
+                                rugas e linhas de expressão. É amplamente utilizado na região da testa, ao redor dos
+                                olhos e na área da boca, proporcionando um aspecto mais jovem e relaxado.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Skin booster</h5>
+                            <h6>Sessões adaptadas às suas necessidades.</h6>
+                            <p class="card-text">
+                                O Skin Booster é um tratamento de hidratação profunda para a pele. Utilizando ácido
+                                hialurônico, ele melhora a textura, firmeza e elasticidade da pele, além de proporcionar
+                                um brilho saudável e uma aparência rejuvenescida.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Contato</h2>
+            <p class="text-center">
+                Entre em contato pelo telefone ou siga-nos nas redes sociais.
+            </p>
+            <div class="text-center">
+                <p>Celular: 15 99701-7740</p>
+                <p>Email: silva.juciaragoncalves@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>
+                Desenvolvido por &copy; 2025
+                <a href="https://www.linkedin.com/in/maximilliano-cramer1996/" target="_blank"
+                    rel="noreferrer noopener"><em>Maximilliano Cramer.</em></a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modal (Lightbox) -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="">
+        <p id="lightboxDesc" class="lightbox-desc"></p>
+    </div>
+
+    <script src="JavaScript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

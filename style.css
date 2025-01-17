@@ -1,0 +1,213 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#home {
+    background: url('img/home.jpeg') no-repeat center center;
+    background-size: cover; /* Faz com que a largura cubra todo o contêiner */
+    min-height: 10vh; /* Define uma altura mínima para que a imagem não corte */
+    background-attachment: fixed; /* Adiciona efeito de paralaxe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+#calendar-container .gc-scheduling-button {
+  font-size: 20px !important;
+  padding: 20px 40px !important;
+  border-radius: 10px !important;
+  background-color: #cda282 !important;
+  color: #fff !important;
+  transform: scale(1.3) !important;
+}
+
+
+.navbar{
+    background-color:#F3EEE8 ;
+}
+
+.navbar-logo {
+    height: 80px;
+    width: auto;
+    border-radius: 100%
+}
+
+.image-container {
+  width: 70%; 
+  height: 400px;  /* Defina a altura fixada */
+  overflow: hidden;  /* Opcional, para garantir que nada ultrapasse a área do contêiner */
+  margin: 0 auto;  /* Centraliza a imagem */
+}
+
+.image-container img {
+  width: 100%;  /* A largura da imagem preenche o contêiner */
+  height: 100%;  /* A altura da imagem preenche o contêiner */
+  object-fit: contain;  /* Ajusta a imagem para caber totalmente dentro do contêiner */
+  object-position: center;  /* Garante que a imagem fique centralizada */
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #CDA282;  
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #A87A60;  
+}
+
+
+#certificados p {
+  font-family: "Edu AU VIC WA NT Hand", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+h4{
+  font-family: "Playwrite AU SA", serif;
+  font-size: 16px;
+}
+
+h1, h2, h3, h5{
+  font-family: "Playwrite AU SA", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+h6{
+  background-color: #F3EEE8;
+  color: #6B523D;
+}
+
+#contact p{
+  font-family: "Edu AU VIC WA NT Hand", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.card:focus {
+  transform: scale(1.0); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.card img {
+  transition: transform 0.3s ease;
+}
+
+.card:hover img,
+.card:focus img {
+  transform: scale(1.1); 
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 5px;
+}
+
+.lightbox-desc {
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rodape {
+    background-image: url('img/footer.jpeg');
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.0rem;
+    position: relative; /* Para garantir que se adapte ao conteúdo acima */
+    width: 100%;
+  }
+  
+  .rodape .container {
+    max-width: 1200px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 0 15px; /* Espaçamento nas laterais */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rodape a {
+    text-decoration: none;
+    color: black;  
+}
+
+.rodape a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: #6B523D ;      
+}
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .rodape {
+      font-size: 1rem; /* Aumenta o tamanho da fonte em telas menores */
+    }
+  
+    .rodape .social-links {
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .rodape .container {
+      padding: 0 10px; /* Reduz o padding para telas pequenas */
+    }
+  }
+  
